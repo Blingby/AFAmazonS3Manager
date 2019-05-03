@@ -248,7 +248,7 @@ static NSString * AFPathByEscapingSpacesWithPlusSigns(NSString *path) {
     NSParameterAssert(filePath);
     NSParameterAssert(destinationPath);
 
-    NSMutableURLRequest *fileRequest = [NSMutableURLRequest requestWithURL:[NSURL fileURLWithPath:filePath]];
+    NSMutableURLRequest *fileRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:filePath]];
     fileRequest.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
 
     NSURLResponse *response = nil;
